@@ -40,11 +40,15 @@ make the third `Counter` **increment by 5** with each click.
 - [ Count 3 ]
 - [ Count 5 ]
 
-**Challenge 5** While having each button with it's own counter was good the needs of our app have changed. We now need to display a single count with three buttons that each increment the count by 1, 3, and 5.
+**Challenge 5** While having each button with it's own counter was good the needs of our app have changed. We now need to display a **single count** with three buttons that each increment the count by 1, 3, and 5.
 
-To do this you'll need to _lift up state_. Previously state existed in each of the Counter components. Now state will have exist in the Component that is the parent of the buttons.
+To do this you'll need to _lift up state_. Previously state existed in _each_ of the Counter components. Now state will have exist _only_ in the Component that is the parent of the buttons.
+
+In a simple solution the App Component would now own `count` on state. In a more advanced solution You could create a new Component that would own `count` on state and also own the increment buttons.
 
 After "lifting state" above the Counter Buttons, you'll want to remove state from these.
+
+With this arrangement there should be a single `count` which cna be incremented by any of the buttons.
 
 ### Stretch Challenges
 
